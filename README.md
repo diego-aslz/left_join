@@ -19,7 +19,7 @@ for details.
 
 Add to your Gemfile:
 
-```
+```ruby
 gem 'left_join'
 ```
 
