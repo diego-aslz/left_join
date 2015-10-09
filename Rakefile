@@ -18,11 +18,11 @@ Jeweler::Tasks.new do |gem|
   gem.name = 'left_join'
   gem.homepage = 'http://github.com/nerde/left_join'
   gem.license = 'MIT'
-  gem.summary = 'TODO: one-line summary of your gem'
-  gem.description = 'TODO: longer description of your gem'
-  gem.email = 'diego.selzlein@unila.edu.br'
+  gem.summary = 'LEFT JOIN with ActiveRecord'
+  gem.description = 'This gem helps doing LEFT JOIN\'s between ActiveRecord '\
+                    'associations'
+  gem.email = 'diegoselzlein@gmail.com'
   gem.authors = ['Diego Aguir Selzlein']
-  # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
 
