@@ -34,7 +34,7 @@ GEM
     hashie (3.4.4)
     highline (1.7.8)
     i18n (0.7.0)
-    jeweler (2.0.1)
+    jeweler (2.1.1)
       builder
       bundler (>= 1.0)
       git (>= 1.2.5)
@@ -43,6 +43,7 @@ GEM
       nokogiri (>= 1.5.10)
       rake
       rdoc
+      semver
     json (1.8.3)
     jwt (1.5.1)
     mini_portile2 (2.0.0)
@@ -75,6 +76,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
+    semver (1.0.1)
     simplecov (0.11.2)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -91,7 +93,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   bundler (~> 1.0)
-  jeweler (~> 2.0.1)
+  jeweler (~> 2.1.0)
   rdoc (~> 3.12)
   rspec (~> 3.3.0)
   simplecov
