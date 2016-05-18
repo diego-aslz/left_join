@@ -43,6 +43,11 @@ RSpec.configure do |config|
       create_table :categories do |t|
         t.string :name
       end
+
+      create_table :tags do |t|
+        t.string :name
+        t.belongs_to :taggable, polymorphic: true
+      end
     end
   end
 end
