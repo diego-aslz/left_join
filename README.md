@@ -12,7 +12,7 @@ Book.left_join(:category)
 
 ## Why?
 
-See [this blog post](http://nerde.github.io/posts/a-better-left-join-with-active-record/)
+See [this blog post](http://nerde.github.io/posts/a-better-left-join-with-active-record)
 for details.
 
 ## Installation
