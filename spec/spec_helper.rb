@@ -1,19 +1,21 @@
-require 'simplecov'
+if ENV['COVERAGE']
+  require 'simplecov'
 
-module SimpleCov::Configuration
-  def clean_filters
-    @filters = []
+  module SimpleCov::Configuration
+    def clean_filters
+      @filters = []
+    end
   end
-end
 
-SimpleCov.configure do
-  clean_filters
-  load_profile 'test_frameworks'
-end
+  SimpleCov.configure do
+    clean_filters
+    load_profile 'test_frameworks'
+  end
 
-ENV['COVERAGE'] && SimpleCov.start do
-  add_filter '/.rvm/'
-  add_filter '/.rbenv/'
+  SimpleCov.start do
+    add_filter '/.rvm/'
+    add_filter '/.rbenv/'
+  end
 end
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
