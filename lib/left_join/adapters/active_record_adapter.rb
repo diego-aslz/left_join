@@ -12,10 +12,20 @@ module LeftJoin
       #
       #     Book.left_join(category: :master_category)
       def left_join(*columns)
-        joins(ActiveRecord::Associations::JoinDependency.new(self, columns, []))
+        join_dependency = ActiveRecord::Associations::JoinDependency.new(self, columns, [])
+        if RAILS4_1_PLUS
+          joins(join_dependency)
+        else
+          join_dependency.join_associations.inject(self) do |result, association|
+            association.join_relation(result)
+          end
+        end
       end
     end
 
-    ActiveRecord::Base.extend ActiveRecordAdapter if defined?(ActiveRecord)
+    if defined?(ActiveRecord)
+      ActiveRecord::Base.extend ActiveRecordAdapter
+      RAILS4_1_PLUS = ActiveRecord::VERSION::MAJOR > 4 || (4 == ActiveRecord::VERSION::MAJOR && ActiveRecord::VERSION::MINOR >= 1)
+    end
   end
 end

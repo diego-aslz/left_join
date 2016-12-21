@@ -1,0 +1,23 @@
+rvm:
+  - 2.1
+  - 2.2
+  - 2.2.2
+  - jruby-1.7.22
+
+gemfile:
+  - gemfiles/3.2.22.5.gemfile
+  - gemfiles/4.0.gemfile
+  - gemfiles/4.1.gemfile
+  - gemfiles/5.0.gemfile
+
+matrix:
+  fast_finish: true
+  exclude:
+    - gemfile: gemfiles/5.0.gemfile
+      rvm: 2.1
+    - gemfile: gemfiles/5.0.gemfile
+      rvm: 2.2
+    - gemfile: gemfiles/5.0.gemfile
+      rvm: jruby-1.7.22
+
+script: "bundle exec rspec"
