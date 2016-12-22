@@ -21,6 +21,8 @@ module LeftJoin
           end
         end
       end
+
+      alias_method :left_joins, :left_join
     end
 
     if defined?(ActiveRecord)
