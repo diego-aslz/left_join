@@ -10,6 +10,8 @@ Book.left_join(:category)
 # ON "books"."category_id" = "categories"."id"
 ```
 
+It also supports chaining associations, e.g. `Category.left_join(books: :authors)`.
+
 ## Why?
 
 See [this blog post](http://nerde.github.io/posts/a-better-left-join-with-active-record)
