@@ -14,7 +14,7 @@ It also supports chaining associations, e.g. `Category.left_join(books: :authors
 
 ## Why?
 
-See [this blog post](http://nerde.github.io/posts/a-better-left-join-with-active-record)
+See [this blog post](http://nerde.github.io/posts/2015/06/25/a-better-left-join-with-active-record.html)
 for details.
 
 ## Installation
